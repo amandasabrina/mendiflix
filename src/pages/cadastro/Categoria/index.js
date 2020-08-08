@@ -32,8 +32,11 @@ function CadastroCategoria() {
     }
 
     useEffect(() => {
-        console.log('alo alo');
-        const URL_TOP = 'http://localhost:8080/categorias';
+        // const URL_TOP = 'http://localhost:8080/categorias';
+        // \/ variavel de ambiente
+        const URL_TOP = window.location.hostname.includes('localhost') 
+        ? 'http://localhost:8080/categorias'
+        : 'https://mendiflix.herokuapp.com/categorias';
         fetch(URL_TOP)
             .then(async (respostaDoServidor) => {
                 const resposta = await respostaDoServidor.json();
