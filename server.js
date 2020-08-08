@@ -11,7 +11,3 @@ server.use(router);
 server.listen(port, () => {
     console.log(`JSON Server is running in ${port}`);
 });
-
-/*ao inves da gente usar o comando do json(package.json) server
-pra rodar o backend, a gente vai pedir pro node ler esse arquivo
-*/
